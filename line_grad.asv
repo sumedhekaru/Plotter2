@@ -1,0 +1,29 @@
+function line_grad
+h= findobj(gcf,'type','line');
+% for i=1:length(h)
+%     x= get(h(i),'xdata');
+%     y= get(h(i),'ydata');
+%     
+%     if length(x)==2
+%         m= diff(y)/diff(x);
+%         fprintf('%0.6f\n',m)
+%     end
+%     
+% end
+
+for i=1:length(h)
+    x= get(h(i),'xdata');
+    y= get(h(i),'ydata');
+    
+    if length(x)>100
+        figure
+        plot(x,y)
+        
+        % reduce sampling rate
+        nn = 100;
+        n = floor(length(y)/nn)
+        
+        ys = reshape(y(1:nn*n,nn,n)
+    end
+    
+end
